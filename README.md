@@ -11,7 +11,7 @@ User Guide
 * To use our proposed framework DSCV, use DSCV.py
 * The real-world datasets we use (LETTER, PENDIGITS, COIL20) are in Real-World dataset folder
 * The synthetic datsets we generate are in Synthetic dataset folder
-* Some utils are contained in Utils folder
+* Some utils are contained in utils folder
 * The code for plotting are in plot_code folder
   + Separability_Graph.ipynb plots the visualization of well/ill separated data
   + real_dataset_Graph.ipynb plots the experiment results on LETTER,COIL20 and PENDIGITS
