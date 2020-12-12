@@ -80,3 +80,7 @@ If you found our work useful to your research, please cite
   howpublished = {\url{https://github.com/zyc4975matholic/DSCV}}
 }
 ```
+
+Acknowledgement
+-
+This project is finished during Fall 2020 Machine Learning course. We thanks Prof. Enric Junqué de Fortuny and TA Zijian Zhou for their meaningful advices on the project. The project also can't be done without the inspiration from [Supervised Discovery of Unknown Unknowns through Test Sample Mining](https://ojs.aaai.org//index.php/AAAI/article/view/7252) and [Rethinking the Value of Labels for Improving Class-Imbalanced Learning](https://arxiv.org/abs/2006.07529). 
