@@ -45,11 +45,11 @@ User Guide
 
 ### Initialize a DSCV instance
 * To intialize a DSCV instance the following parameter has to be passed
-  + classifier: A classifier object( Not instance) that at least implement fit and predict methods, default = SVC
-  + kwargs: A dictionary that contains the parameter-value pairs used to generate the classifier, default = default setting of SVC
-  + sample_rate: A float between 0 and 1, indicates the test sample size, default = 0.2
-  + k_fold: A int larger than 2, indicates the number of folds in cross validation, default = 3
-  + resampler: A str that indicates the sampling strategy. Must be one of the following, default = "SMOTE"
+  + classifier: a classifier object(not instance) that at least implement fit and predict methods, default = SVC
+  + kwargs: a dictionary that contains the parameter-value pairs used to generate the classifier, default = default setting of SVC
+  + sample_rate: a float between 0 and 1, indicates the test sample size, default = 0.2
+  + k_fold: a int larger than 2, indicates the number of folds in cross validation, default = 3
+  + resampler: a str that indicates the sampling strategy. Must be one of the following, default = "SMOTE"
       - "ClusterCentroids"
       - "CondensedNearestNeighbour"
       - "EditedNearestNeighbours"
