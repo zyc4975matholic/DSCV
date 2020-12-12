@@ -20,14 +20,52 @@ from sklearn.base import BaseEstimator
 from sklearn.datasets import load_wine
 from sklearn.metrics import f1_score
 
+# This code is implemented all by Yuchen Zhu. This code implements the framework DSCV. See more information in Readme.md
+# This code is for running. Run the code directly for testing.
+
 class DSCV(BaseEstimator):
     # Pass in an instance of base classfier and resampler type and the keyword arguments(using dictionary), default is SVM, None and SMOTE
+    
+'''
+    To intialize a DSCV instance the following parameter has to be passed
+        classifier: A classifier object( Not instance) that at least implement fit and predict methods, default = SVC
+        kwargs: A dictionary that contains the parameter-value pairs used to generate the classifier, default = default setting of SVC
+        sample_rate: A float between 0 and 1, indicates the test sample size, default = 0.2
+        k_fold: A int larger than 2, indicates the number of folds in cross validation, default = 3
+        resampler: A str that indicates the sampling strategy. Must be one of the following, default = "SMOTE"
+            "ClusterCentroids"
+            "CondensedNearestNeighbour"
+            "EditedNearestNeighbours"
+            "RepeatedEditedNearestNeighbours"
+            "AllKNN"
+            "InstanceHardnessThreshold"
+            "NearMiss"
+            "NeighbourhoodCleaningRule"
+            "OneSidedSelection"
+            "RandomUnderSampler"
+            "TomekLinks"
+            "SVM-SMOTE"
+            "ADASYN"
+            "KMeansSMOTE"
+            "BorderlineSMOTE"
+            "RandomOverSampler"
+            "SMOTE"
+            "SMOTEENN"
+            "SMOTETomek"
+     Trainning with DSCV
+        use method meta_fit, passing in X_train, Y_train, X_test, Y_test return a trained model with DSCV
+     Predict with DSCV
+        use method predict, passing X, return a numpy array with predicted labels, label with 99 are unknown unknowns found by DSCV
+'''
+    
+    
     def __init__(self, classifier = SVC, kwargs = {"C":1, "kernel":"rbf"}, resampler = "SMOTE", sample_rate = 0.2, k_fold = 3):
         self.classifier = classifier
         self.resampler = resampler
         self.kwargs = kwargs
         self.sample_rate = sample_rate
         self.k_fold = k_fold
+        
     def J1_score(self, size, k_mean,k_cov, uu_mean, dim):
         # J_1 socre is a metric to evaluate the class separability of a dataset
         # In this function, k_J_1 is the known class separability, which only considers the known class in the trainning set, also the computation follows
