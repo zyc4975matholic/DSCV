@@ -72,16 +72,16 @@ User Guide
 
 ### Trainning with DSCV
 * use method meta_fit, passing in X_train, Y_train, X_test, Y_test
-  return a trained model with DSCV
+* return a trained model with DSCV
 
 ### Predict with DSCV
 * use method predict, passing X,
-  return a numpy array with predicted labels, label with 99 are unknown unknowns found by DSCV
+* return a numpy array with predicted labels, label with 99 are unknown unknowns found by DSCV
   
   
 Citation
 -
-If you found our work useful to your research, please cite
+If you found our work useful to your research, we will appreciate if you can cite
 
 ```
 @misc{DSCV2020,
