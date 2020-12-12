@@ -11,9 +11,22 @@ User Guide
 * To use our proposed framework DSCV, use DSCV.py
 * The real-world datasets we use (LETTER, PENDIGITS, COIL20) are in Real-World dataset folder
 * The synthetic datsets we generate are in Synthetic dataset folder
+* Some utils are contained in Utils folder
 * The code for plotting are in plot_code folder
+  + Separability_Graph.ipynb plots the visualization of well/ill separated data
+  + real_dataset_Graph.ipynb plots the experiment results on LETTER,COIL20 and PENDIGITS
+  + synthetic_dataset_Graph.ipynb plots the experiment results on Synthetic datasets
+  + Toy_Example_Graph.ipynb plots the visualization of the algorithm applied to a simple dataset
 * The code for experiments are in code folder
-
+  + RTSCV.py contains the majority of the code written during the research (not well commented and arranged! upload for archive)
+  + OSR_PENDIGITS.py contains the code to run WSVM, 1-vs-set Machine on PENDGIITS
+  + OSR_LETTER.py contains the code to run WSVM, 1-vs-set Machine on LETTER
+  + OSR_COIL20_part1.py/OSR_COIL20_part2.py contains the code to run WSVM, 1-vs-set Machine on COIL20
+  + generate_LT.py contains the code that generates Long-tailed dataset from real world dataset
+  + plot_toy_example.py contains the code that generates the data as the toy example visualization of the framework
+  + sampling.py contains the code that run the experiments on the combination of DSCV with different sampling methods
+  + ensemble.py contains the code that runs the experiments on the combination of RTSCV with different ensemble classifier implemented with [Imbalanced-learn](https://github.com/scikit-learn-contrib/imbalanced-learn/tree/master/imblearn)
+  + more_ensemble.py contains the code that runs the experiments on the combination of RTSCV with different ensemble classifier implemented with [Awesome-imbalanced-learning](https://github.com/ZhiningLiu1998/awesome-imbalanced-learning)
 ### To-start
 * All code are written in Python.
 * Download the repo by
