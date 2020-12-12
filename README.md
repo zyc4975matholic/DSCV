@@ -14,9 +14,58 @@ User Guide
 * The code for plotting are in plot_code folder
 * The code for experiments are in code folder
 
+### To-start
+* All code are written in Python.
+* Download the repo by
+  ```
+  git clone git@github.com:zyc4975matholic/DSCV.git
+  cd DSCV
+  ```
+* Install all dependencies by
+  ```
+  pip install -r requirements.txt
+  ```
+* Test the code by
+  ```
+  python DSCV.py
+  ```
 
+### Initialize a DSCV instance
+* To intialize a DSCV instance the following parameter has to be passed
+  + classifier: A classifier object( Not instance) that at least implement fit and predict methods, default = SVC
+  + kwargs: A dictionary that contains the parameter-value pairs used to generate the classifier, default = default setting of SVC
+  + sample_rate: A float between 0 and 1, indicates the test sample size, default = 0.2
+  + k_fold: A int larger than 2, indicates the number of folds in cross validation, default = 3
+  + resampler: A str that indicates the sampling strategy. Must be one of the following, default = "SMOTE"
+      - "ClusterCentroids"
+      - "CondensedNearestNeighbour"
+      - "EditedNearestNeighbours"
+      - "RepeatedEditedNearestNeighbours"
+      - "AllKNN" 
+      - "InstanceHardnessThreshold"
+      - "NearMiss"
+      - "NeighbourhoodCleaningRule"
+      - "OneSidedSelection"
+      - "RandomUnderSampler"
+      - "TomekLinks"
+      - "SVM-SMOTE"
+      - "ADASYN"
+      - "KMeansSMOTE"
+      - "BorderlineSMOTE"
+      - "RandomOverSampler"
+      - "SMOTE"
+      - "SMOTEENN"
+      - "SMOTETomek"
 
+### Trainning with DSCV
+* use method meta_fit, passing in X_train, Y_train, X_test, Y_test
+  return a trained model with DSCV
 
+### Predict with DSCV
+* use method predict, passing X,
+  return a numpy array with predicted labels, label with 99 are unknown unknowns found by DSCV
+  
+  
 Citation
 -
 If you found our work useful to your research, please cite
